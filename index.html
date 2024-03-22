@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	#tm{
+		font-size: 80px;
+		color:skyblue;
+		font-family: sans-serif;
+		text-align: center;
+		text-shadow: 0px 10px 10px black;
+		/*margin-top: 250px;*/
+	}
+	.image{
+		height:400px;
+		width: 500px;
+		background-color: grey;
+		text-align: center;
+		margin-left: 400px;
+		padding-top: 200px;
+		padding-left: 20px;
+		background-image:url("watch.jpg");
+		background-repeat: no-repeat;
+		/*text-align: center;
+		
+
+
+	}
+</style>
+<body>
+<div class="image">
+<h1 id="tm">00:00:00</h1>
+</div>
+<script type="text/javascript">
+	let tm=document.getElementById("tm");
+	function diplayTime(){
+		let time=new Date();
+		let hr=(time.getHours())%12;
+		let mn=time.getMinutes();
+		// let sc=time.getSeconds();//:${sc}
+        // let ms=time.getMilliseconds();//:${ms}
+		tm.innerHTML=`${hr}:${mn}`;
+	}
+	setInterval(diplayTime,100);
+</script>
+
+</body>
+</html>
